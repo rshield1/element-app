@@ -7,3 +7,8 @@ const config = {
     messagingSenderId: "735927576189",
     appId: "1:735927576189:web:163570ca8c52c9169d7314"
   };
+
+  const firebase = window.firebase.initializeApp(config)
+  const { FieldValue} = window.firebase.firestore
+
+  export { firebase, FieldValue };
