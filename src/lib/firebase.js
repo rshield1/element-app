@@ -1,3 +1,5 @@
+import { seedDatabase } from '../seed';
+
 const config = {
     apiKey: "AIzaSyApZNG1M_1Ugx-fGAF75PEwvCuSxx2m6As",
     authDomain: "element-678.firebaseapp.com",
@@ -11,4 +13,6 @@ const config = {
   const firebase = window.firebase.initializeApp(config)
   const { FieldValue} = window.firebase.firestore
 
+  seedDatabase(firebase);
+  
   export { firebase, FieldValue };
